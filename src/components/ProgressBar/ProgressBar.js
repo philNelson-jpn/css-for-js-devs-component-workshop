@@ -21,8 +21,8 @@ const ProgressBar = ({ value, size }) => {
 const Wrapper = styled.div`
   height: 12px;
   width: 100%;
-  background: rgba(128, 128, 128, 0.15);
-  box-shadow: inset 0px 2px 4px rgba(128, 128, 128, 0.35);
+  background: ${COLORS.transparentGray15};
+  box-shadow: inset 0px 2px 4px ${COLORS.transparentGray35};
   border-radius: 4px;
   overflow: hidden;
 `;
