@@ -6,6 +6,9 @@ import { COLORS } from '../../constants';
 import VisuallyHidden from '../VisuallyHidden';
 
 const ProgressBar = ({ value, size }) => {
+
+  const height = size === 'small' ? 8 : 12;
+
   return <Wrapper 
     role="progressbar" 
     aria-valuenow={value} 
@@ -13,22 +16,23 @@ const ProgressBar = ({ value, size }) => {
     aria-valuemax="100">
       <VisuallyHidden>{value}%</VisuallyHidden>
 
-  <Bar style={{'--width': value + '%'}}/>
+  <Bar style={{'--width': value + '%', '--height': height + 'px'}}/>
   </Wrapper>
   ;
 };
 
 const Wrapper = styled.div`
-  height: 12px;
+  height: var(--height);
   width: 100%;
   background: ${COLORS.transparentGray15};
   box-shadow: inset 0px 2px 4px ${COLORS.transparentGray35};
   border-radius: 4px;
+  /* Ensure that the progress bar fills its container fluidly, border radius and all */
   overflow: hidden;
 `;
 
 const Bar = styled.div`
-  height: 12px;
+  height: var(--height);
   width: var(--width);
   background: slateblue;
 `;
