@@ -13,8 +13,10 @@ const Select = ({ label, value, onChange, children }) => {
       <NativeSelect value={value} onChange={onChange}>
         {children}
       </NativeSelect>
-      <CustomDropdown>{value}
+      <CustomDropdown>{displayedValue}
+      <IconWrapper style={{'--size': 24 + 'px'}}>
       <Icon id="chevron-down" strokeWidth={1} size={24} />
+      </IconWrapper>
       </CustomDropdown>
     </SelectWrapper>
   );
@@ -41,7 +43,18 @@ const CustomDropdown = styled.div`
   font-size: ${16 / 16}rem;
   border-radius: 8px;
   padding: 12px 16px;
+  padding-right: 52px;
   background: ${COLORS.transparentGray15};
+`;
+
+const IconWrapper = styled.div`
+  position: absolute;
+  height: var(--size);
+  width: var(--size);
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  margin: auto;
 `;
 
 export default Select;
