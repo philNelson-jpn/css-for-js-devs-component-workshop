@@ -51,6 +51,9 @@ const CustomDropdown = styled.div`
     outline: 5px auto -webkit-focus-ring-color;
   }
 
+  ${NativeSelect}:hover + &{
+    color: ${COLORS.black}
+  }
 `;
 
 const IconWrapper = styled.div`
