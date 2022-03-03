@@ -15,7 +15,7 @@ const Select = ({ label, value, onChange, children }) => {
       </NativeSelect>
       <CustomDropdown>{displayedValue}
       <IconWrapper style={{'--size': 24 + 'px'}}>
-      <Icon id="chevron-down" strokeWidth={1} size={24} />
+      <Icon id="chevron-down" strokeWidth={2} size={24} />
       </IconWrapper>
       </CustomDropdown>
     </SelectWrapper>
