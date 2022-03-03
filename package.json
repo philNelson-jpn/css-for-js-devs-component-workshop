@@ -11,6 +11,9 @@
     "react-scripts": "4.0.1",
     "styled-components": "5.2.1"
   },
+  "browser": {
+    "[module-name]": false   
+  },
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
     "start": "start-storybook -p 6006 -s public"
