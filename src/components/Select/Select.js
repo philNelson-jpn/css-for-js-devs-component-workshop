@@ -45,6 +45,12 @@ const CustomDropdown = styled.div`
   padding: 12px 16px;
   padding-right: 52px;
   background: ${COLORS.transparentGray15};
+
+  ${NativeSelect}:focus + &{
+    outline: 1px dotted #212121;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+
 `;
 
 const IconWrapper = styled.div`
@@ -55,6 +61,7 @@ const IconWrapper = styled.div`
   bottom: 0;
   right: 10px;
   margin: auto;
+  pointer-events: none;
 `;
 
 export default Select;
